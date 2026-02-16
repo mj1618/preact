@@ -1,9 +1,9 @@
-// @ts-check
-import { React, createRoot, html, Navbar, Footer } from './common.js';
+import React from 'react';
+import { createRoot, html, Navbar, Footer } from './common.ts';
 
 // ============ Page Components ============
 
-function Hero() {
+function Hero(): React.ReactElement {
   return html`
     <section class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white py-24 px-8 text-center">
       <h1 class="text-5xl font-bold mb-4">Build Something Amazing</h1>
@@ -14,24 +14,33 @@ function Hero() {
         Get Started Free
       </button>
     </section>
-  `;
+  ` as React.ReactElement;
 }
 
-/**
- * @param {{ icon: string, title: string, description: string }} props
- */
-function FeatureCard({ icon, title, description }) {
+interface FeatureCardProps {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+function FeatureCard({ icon, title, description }: FeatureCardProps): React.ReactElement {
   return html`
     <div class="bg-white p-8 rounded-xl shadow-md text-center hover:shadow-lg transition-shadow">
       <div class="text-5xl mb-4">${icon}</div>
       <h3 class="text-xl font-semibold mb-2">${title}</h3>
       <p class="text-gray-600 text-sm">${description}</p>
     </div>
-  `;
+  ` as React.ReactElement;
 }
 
-function Features() {
-  const features = [
+interface Feature {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+function Features(): React.ReactElement {
+  const features: Feature[] = [
     {
       icon: "🚀",
       title: "Lightning Fast",
@@ -71,10 +80,10 @@ function Features() {
         ${features.map((f) => html`<${FeatureCard} ...${f} />`)}
       </div>
     </section>
-  `;
+  ` as React.ReactElement;
 }
 
-function CallToAction() {
+function CallToAction(): React.ReactElement {
   return html`
     <section class="bg-slate-900 text-white py-20 px-8 text-center">
       <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
@@ -83,10 +92,10 @@ function CallToAction() {
         Start Your Free Trial
       </button>
     </section>
-  `;
+  ` as React.ReactElement;
 }
 
-function App() {
+function App(): React.ReactElement {
   return html`
     <div class="font-sans text-slate-900 leading-relaxed">
       <${Navbar} />
@@ -95,7 +104,7 @@ function App() {
       <${CallToAction} />
       <${Footer} />
     </div>
-  `;
+  ` as React.ReactElement;
 }
 
 // ============ Mount ============
