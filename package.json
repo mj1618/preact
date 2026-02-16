@@ -1,0 +1,24 @@
+{
+  "name": "artie-example-static",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mj1618/artie-example-static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mj1618/artie-example-static/issues"
+  },
+  "homepage": "https://github.com/mj1618/artie-example-static#readme",
+  "description": "",
+  "dependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "htm": "^3.1.1",
+    "preact": "^10.28.3",
+    "typescript": "^5.9.3"
+  }
+}
