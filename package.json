@@ -1,8 +1,11 @@
 {
   "name": "artie-example-static",
   "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {},
+  "type": "module",
+  "main": "serve.js",
+  "scripts": {
+    "serve": "node serve.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mj1618/artie-example-static.git"
@@ -20,5 +23,8 @@
     "htm": "^3.1.1",
     "preact": "^10.28.3",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3"
   }
 }
