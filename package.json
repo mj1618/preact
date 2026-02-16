@@ -2,7 +2,9 @@
   "name": "artie-example-static",
   "version": "1.0.0",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mj1618/artie-example-static.git"
