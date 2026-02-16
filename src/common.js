@@ -1,8 +1,9 @@
 // @ts-check
-import { h, render } from 'preact';
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import htm from 'htm';
 
-const html = htm.bind(h);
+const html = htm.bind(React.createElement);
 
 // ============ Common Components ============
 
@@ -28,4 +29,4 @@ function Footer() {
   `;
 }
 
-export { h, render, html, Navbar, Footer };
+export { React, createRoot, html, Navbar, Footer };

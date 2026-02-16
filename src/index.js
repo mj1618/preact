@@ -1,5 +1,5 @@
 // @ts-check
-import { h, render, html, Navbar, Footer } from './common.js';
+import { React, createRoot, html, Navbar, Footer } from './common.js';
 
 // ============ Page Components ============
 
@@ -103,4 +103,4 @@ function App() {
 const rootEl = document.getElementById("root");
 if (!rootEl) throw new Error("Missing #root");
 
-render(html`<${App} />`, rootEl);
+createRoot(rootEl).render(html`<${App} />`);
